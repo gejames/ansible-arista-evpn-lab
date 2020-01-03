@@ -1,0 +1,11 @@
+---
+hosts: all
+connection: network_cli
+gather_facts: false
+
+
+tasks:
+   - name:  RESET CONFIGS TO STARTUP
+     eos_command:
+        commands:
+           - configure replace startup-config
